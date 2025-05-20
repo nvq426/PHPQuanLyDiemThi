@@ -1,0 +1,373 @@
+/* Light Mode */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .login-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #2E7D32;
+    font-size: 28px;
+}
+
+body.dark-mode .login-container h2 {
+    color: #4CAF50;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    text-align: left;
+    color: #555;
+}
+
+body.dark-mode label {
+    color: #bbb;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #2E7D32;
+    outline: none;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+    border-color: #4CAF50;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Để dành không gian cho icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.toggle-password svg {
+    fill: #555;
+    transition: fill 0.3s;
+}
+
+body.dark-mode .toggle-password svg {
+    fill: #bbb;
+}
+
+button {
+    padding: 12px;
+    background-color: #2E7D32;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #1B5E20;
+    transform: translateY(-1px);
+}
+
+body.dark-mode button {
+    background-color: #4CAF50;
+}
+
+body.dark-mode button:hover {
+    background-color: #388E3C;
+}
+
+.error {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+body.dark-mode .error {
+    color: #ff6b6b;
+}
+
+.header {
+    width: 100%;
+    background-color: #2E7D32;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .header {
+    background-color: #1B5E20;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header li {
+    display: inline;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.header a:hover {
+    background-color: #1B5E20;
+}
+
+body.dark-mode .header a:hover {
+    background-color: #388E3C;
+}
+
+.header a svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.content {
+    margin-top: 70px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    min-height: 100vh;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .content {
+    background-color: #1e1e1e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+body.dark-mode table {
+    background-color: #2e2e2e;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background-color: #2E7D32;
+    color: #fff;
+    font-weight: 600;
+}
+
+body.dark-mode th {
+    background-color: #1B5E20;
+}
+
+td a {
+    color: #2E7D32;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+body.dark-mode td a {
+    color: #4CAF50;
+}
+
+td a:hover {
+    color: #1B5E20;
+    text-decoration: underline;
+}
+
+body.dark-mode td a:hover {
+    color: #388E3C;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.filters .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filters .filter-group input {
+    width: 200px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .popup {
+    background-color: #2e2e2e;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #2E7D32;
+}
+
+body.dark-mode .popup h2 {
+    color: #4CAF50;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2E7D32;
+    color: #fff;
+    width: 100%;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode footer {
+    background-color: #1B5E20;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: #2E7D32;
+}
+
+body.dark-mode #theme-toggle svg {
+    fill: #4CAF50;
+}
